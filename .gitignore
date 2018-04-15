@@ -1,6 +1,6 @@
-.idea
 *.py
 telethon/
+readthedocs/
 
 # User session
 *.session
