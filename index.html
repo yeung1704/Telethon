@@ -4,7 +4,16 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>Telethon API</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="css/docs.css" rel="stylesheet">
+    <link id="style" href="css/docs.light.css" rel="stylesheet">
+    <script>
+    try {
+        which = document.cookie.split('=')[1].split(';')[0];
+        if (which) {
+            document.getElementById("style").href = "css/" + which;
+        }
+    } catch (e) {
+    }
+    </script>
     <link href="https://fonts.googleapis.com/css?family=Nunito|Source+Code+Pro" rel="stylesheet">
     <style>
         body {
@@ -21,7 +30,7 @@
     on what the methods, constructors and types mean. Nevertheless, this
     page aims to provide easy access to all the available methods, their
     definition and parameters.</p>
-
+    <p id="themeSelect"></p>
     <p>Please note that when you see this:</p>
     <pre>---functions---
 users.getUsers#0d91a548 id:Vector&lt;InputUser&gt; = Vector&lt;User&gt;</pre>
@@ -52,7 +61,7 @@ users.getUsers#0d91a548 id:Vector&lt;InputUser&gt; = Vector&lt;User&gt;</pre>
 
     <h3 id="methods">Methods</h3>
     <p>Currently there are <b>258 methods</b> available for the layer
-    76. The complete list can be seen <a href="methods/index.html">here</a>.
+    78. The complete list can be seen <a href="methods/index.html">here</a>.
     <br /><br />
     Methods, also known as <i>requests</i>, are used to interact with the
     Telegram API itself and are invoked through <code>client(Request(...))</code>.
@@ -62,7 +71,7 @@ users.getUsers#0d91a548 id:Vector&lt;InputUser&gt; = Vector&lt;User&gt;</pre>
     some dialogs, users, etc.</p>
 
     <h3 id="types">Types</h3>
-    <p>Currently there are <b>237 types</b>. You can see the full
+    <p>Currently there are <b>238 types</b>. You can see the full
     list <a href="types/index.html">here</a>.</p>
 
     <p>The Telegram types are the <i>abstract</i> results that you receive
@@ -76,7 +85,7 @@ users.getUsers#0d91a548 id:Vector&lt;InputUser&gt; = Vector&lt;User&gt;</pre>
     an instance of it by using one of its, possibly multiple, constructors.</p>
 
     <h3 id="constructors">Constructors</h3>
-    <p>Currently there are <b>644 constructors</b>. You can see
+    <p>Currently there are <b>645 constructors</b>. You can see
     the full list <a href="constructors/index.html">here</a>.</p>
 
     <p>Constructors are the way you can create instances of the abstract types
@@ -145,5 +154,17 @@ users.getUsers#0d91a548 id:Vector&lt;InputUser&gt; = Vector&lt;User&gt;</pre>
     </p>
 </div>
 <script src="js/search.js"></script>
+<script>
+document.getElementById("themeSelect").innerHTML = `
+Select
+<a href="#" onclick="setTheme('docs.light.css')">light</a> /
+<a href="#" onclick="setTheme('docs.dark.css')">dark</a> theme.
+`;
+
+function setTheme(which) {
+    style.href = "css/" + which;
+    document.cookie = "css=" + which + "; path=/";
+}
+</script>
 </body>
 </html>

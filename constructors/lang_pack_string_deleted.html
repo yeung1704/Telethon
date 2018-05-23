@@ -4,7 +4,16 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>LangPackStringDeleted</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="../css/docs.css" rel="stylesheet">
+    <link id="style" href="../css/docs/docs.light.css" rel="stylesheet">
+    <script>
+    try {
+        which = document.cookie.split('=')[1].split(';')[0];
+        if (which) {
+            document.getElementById("style").href = "../css/" + which;
+        }
+    } catch (e) {
+    }
+    </script>
     <link href="https://fonts.googleapis.com/css?family=Nunito|Source+Code+Pro" rel="stylesheet">
 </head>
 <body>
