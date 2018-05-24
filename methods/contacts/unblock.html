@@ -4,17 +4,14 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>UnblockRequest</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link id="style" href="../../css/docs/docs.light.css" rel="stylesheet">
+    <link id="style" href="../../css/docs.light.css" rel="stylesheet">
     <script>
-    try {
-        which = document.cookie.split('=')[1].split(';')[0];
-        if (which) {
-            document.getElementById("style").href = "../../css/" + which;
-        }
-    } catch (e) {
-    }
+    document.getElementById("style").href = "../../css/docs."
+        + (document.cookie.split(";")[0].split("=")[1] || "light")
+        + ".css";
     </script>
-    <link href="https://fonts.googleapis.com/css?family=Nunito|Source+Code+Pro" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito|Source+Code+Pro"
+          rel="stylesheet">
 </head>
 <body>
 <div id="main_div"><ul class="horizontal"><li><a href="../../index.html">API</a></li><img src="../../img/arrow.svg" alt="/" /><li><a href="../../index.html">Docs</a></li><img src="../../img/arrow.svg" alt="/" /><li><a href="../index.html">Methods</a></li><img src="../../img/arrow.svg" alt="/" /><li><a href="index.html">Contacts</a></li><img src="../../img/arrow.svg" alt="/" /><li>unblock</li></ul><h1>UnblockRequest</h1><pre>---functions---

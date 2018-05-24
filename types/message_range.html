@@ -4,17 +4,14 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>MessageRange</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link id="style" href="../css/docs/docs.light.css" rel="stylesheet">
+    <link id="style" href="../css/docs.light.css" rel="stylesheet">
     <script>
-    try {
-        which = document.cookie.split('=')[1].split(';')[0];
-        if (which) {
-            document.getElementById("style").href = "../css/" + which;
-        }
-    } catch (e) {
-    }
+    document.getElementById("style").href = "../css/docs."
+        + (document.cookie.split(";")[0].split("=")[1] || "light")
+        + ".css";
     </script>
-    <link href="https://fonts.googleapis.com/css?family=Nunito|Source+Code+Pro" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito|Source+Code+Pro"
+          rel="stylesheet">
 </head>
 <body>
 <div id="main_div"><ul class="horizontal"><li><a href="../index.html">API</a></li><img src="../img/arrow.svg" alt="/" /><li><a href="../index.html">Docs</a></li><img src="../img/arrow.svg" alt="/" /><li><a href="index.html">Types</a></li><img src="../img/arrow.svg" alt="/" /><li>message_range</li></ul><h1>MessageRange</h1><h3>Available constructors</h3><p>This type has one constructor available.</p><table><tr><td><a href="../constructors/message_range.html">MessageRange</a></td></tr></table><h3>Methods returning this type</h3><p>No method returns this type.</p><table></table><h3>Methods accepting this type as input</h3><p>No methods accept this type as an input parameter.</p><table></table><h3>Other types containing this type</h3><p>You can find this type as a member of this other type.</p><table><tr><td><a href="../constructors/channel_messages_filter.html">ChannelMessagesFilter</a></td></tr></table></div></body></html>
