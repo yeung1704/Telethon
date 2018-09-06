@@ -457,9 +457,7 @@ class MTProtoSender:
                 # TODO Is it possible to detect malformed messages vs
                 # an actually broken authkey?
                 __log__.warning('Broken authorization key?: {}'.format(e))
-                self.state.auth_key = None
-                self._start_reconnect()
-                break
+                continue
             except SecurityError as e:
                 # A step while decoding had the incorrect data. This message
                 # should not be considered safe and it should be ignored.
