@@ -1,0 +1,11 @@
+from telethon import TelegramClient, events
+
+client = TelegramClient('name', 520300, 954af32addb9320df0dfd9a0a6fcfd04)
+
+@client.on(events.NewMessage)
+async def my_event_handler(event):
+    if 'A4' in event.raw_text:
+        await event.reply('A4 is dead')
+
+client.start()
+client.run_until_disconnected()
