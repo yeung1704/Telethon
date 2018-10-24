@@ -1,6 +1,6 @@
 from telethon import TelegramClient, events
 
-client = TelegramClient('name', 520300, 954af32addb9320df0dfd9a0a6fcfd04)
+client = TelegramClient('丹尼爾 (asd123123)', 520300, 954af32addb9320df0dfd9a0a6fcfd04)
 
 @client.on(events.NewMessage)
 async def my_event_handler(event):
